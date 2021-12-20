@@ -1,0 +1,224 @@
+{
+	"info": {
+		"_postman_id": "33c8ddb0-4aa7-4fdb-8a79-27a277724683",
+		"name": "Climedo Health",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"full_name\": \"Keania Niate Eric\",\r\n    \"email\": \"keaniaeric@gmail.com\",\r\n    \"password\": \"kabolobari\",\r\n    \"password_confirmation\": \"kabolobari\",\r\n    \"birth_date\": \"01/07/1996\"\r\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"keaniaeric@gmail.com\",\r\n    \"password\": \"kabolobari\"\r\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/login/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Admin All Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjFjMDdlN2IyNTQ5M2VjOTgyZmVhNjdmIiwiZW1haWwiOiJrZWFuaWFlcmljQGdtYWlsLmNvbSIsImlzX2FkbWluIjp0cnVlLCJpYXQiOjE2NDAwMTQ0MjQsImV4cCI6MTY0MDAyMTYyNH0.8Eg5VxiLqRpTDc-ecShrMgqpAIZNh3-v95AVdBA-7mw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/users/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Update Profile",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjFjMDdlN2IyNTQ5M2VjOTgyZmVhNjdmIiwiZW1haWwiOiJrZWFuaWFlcmljQGdtYWlsLmNvbSIsImlhdCI6MTY0MDAxMTk3NiwiZXhwIjoxNjQwMDE5MTc2fQ.dsT0_8czaqFBDpmpAvaLRdYrDy3PV98q3AeCXqaJ4jg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"full_name\": \"robbin hood abelin\",\r\n    \"birth_date\": \"01/08/2020\"\r\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/users/update/profile",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"update",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Edit User",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjFjMDdlN2IyNTQ5M2VjOTgyZmVhNjdmIiwiZW1haWwiOiJrZWFuaWFlcmljQGdtYWlsLmNvbSIsImlhdCI6MTY0MDAxMTk3NiwiZXhwIjoxNjQwMDE5MTc2fQ.dsT0_8czaqFBDpmpAvaLRdYrDy3PV98q3AeCXqaJ4jg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"full_name\": \"robbin hood abelin\",\r\n    \"birth_date\": \"01/08/2020\"\r\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/users/update/61c07e7b25493ec982fea67f",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"update",
+								"61c07e7b25493ec982fea67f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "localhost:8080"
+		}
+	]
+}
