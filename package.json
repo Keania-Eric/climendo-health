@@ -1,32 +1,32 @@
 {
-  "name": "climendo",
-  "version": "1.0.0",
-  "description": "A test application for clemendo health",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Keania-Eric/climendo-health.git"
-  },
-  "keywords": [
-    "Node",
-    "API",
-    "Test"
-  ],
-  "author": "Keania Eric",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Keania-Eric/climendo-health/issues"
-  },
-  "homepage": "https://github.com/Keania-Eric/climendo-health#readme",
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "dotenv": "^10.0.0",
-    "express": "^4.17.2",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.1.2"
-  }
+    "name": "climendo",
+    "version": "1.0.0",
+    "description": "A test application for clemendo health",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Keania-Eric/climendo-health.git"
+    },
+    "keywords": [
+        "Node",
+        "API",
+        "Test"
+    ],
+    "author": "Keania Eric",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Keania-Eric/climendo-health/issues"
+    },
+    "homepage": "https://github.com/Keania-Eric/climendo-health#readme",
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "dotenv": "^10.0.0",
+        "express": "^4.17.2",
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "^6.1.2"
+    }
 }
