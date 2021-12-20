@@ -12,9 +12,11 @@ app.use(express.json());
 
 // the authentication routes
 const authRouter = require('./routes/auth.routes')
+const userRouter = require('./routes/user.routes')
 
 // lets route all request prefixed with /auth to the auth router
 app.use('/auth', authRouter)
+app.use('/user', userRouter)
 
 app.get('/', (req, res, next) => {
     res.json('Welcome to climendo health')
