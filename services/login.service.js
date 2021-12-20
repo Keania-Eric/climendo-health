@@ -32,7 +32,7 @@ class loginService {
         await user.update({ last_login: new Date() })
 
         // we create a jwt token for this user now
-        const token = jwt.sign({ user_id: user._id, email }, tokenKey, { "expiresIn": "2h" })
+        const token = jwt.sign({ user_id: user._id, email, is_admin: user.is_admin }, tokenKey, { "expiresIn": "2h" })
 
 
         // save the token

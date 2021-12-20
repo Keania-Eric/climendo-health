@@ -6,6 +6,7 @@ const userAttributes = {
     full_name: { type: String },
     birth_date: { type: Date },
     password: { type: String },
+    is_admin: { type: Boolean, default: false },
     last_login: { type: Date, default: null }
 }
 

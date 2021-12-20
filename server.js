@@ -16,11 +16,16 @@ const userRouter = require('./routes/user.routes')
 
 // lets route all request prefixed with /auth to the auth router
 app.use('/auth', authRouter)
-app.use('/user', userRouter)
+app.use('/users', userRouter)
 
 app.get('/', (req, res, next) => {
     res.json('Welcome to climendo health')
 })
+
+// fallback route
+app.get('*', function(req, res) {
+    res.status(404).json('Invalid route');
+});
 
 app.listen(PORT, () => {
     console.log(`Climendo app running on ${PORT}`)
